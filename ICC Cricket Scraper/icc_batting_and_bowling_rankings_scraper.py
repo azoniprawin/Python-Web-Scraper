@@ -23,7 +23,7 @@ urls = [
 
 final_result_file_name = "All Ranking List.csv"
 final_column_names = ["Ranking Type", "Position", "Player Name", "Team Name", "Rating", "Career Best Rating", "Crawl URL"]
-pd.DataFrame(columns=final_column_names).to_csv(final_result_file_name, sep="\t", index=False, encoding="utf-8", mode="a")
+pd.DataFrame(columns=final_column_names).to_csv(final_result_file_name, sep="\t", index=False, encoding="utf-8")
 
 for url in urls:
 	request_object = requests.get(url, headers=headers)
